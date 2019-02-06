@@ -71,7 +71,8 @@ a:hover{
 }
 .profile img{
   border-radius: 50%;
-  max-width: 300px
+  max-width: 100%;
+  padding-top: 20px;
 }
 .bottom {
   text-align: center;
@@ -90,9 +91,45 @@ a:hover{
   background-color: rgb(20,20,20);
   color: white;
 }
+#sidebar {
+  background-color: rgb(20,20,20);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100px;
+  text-align: center;
+}
+#page-content {
+  margin-left: 125px;
+}
+#sidebar ul {
+  list-style: none;
+  padding-left: 0px;
+}
+#sidebar li {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#sidebar a {
+  color: rgb(245,245,245);
+  font-size: 25px;
+}
+#sidebar a:hover {
+  color: #50808E;
+}
 @media (max-width: 600px) {
   /* For a screen < 600px, this CSS will be read */
   body{
     background-color: rgb(75,75,75);
+  }
+  #sidebar {
+    width: 40px;
+  }
+  #sidebar a {
+    font-size: 20px;
+  }
+  #page-content {
+    margin-left: 65px;
   }
 }
