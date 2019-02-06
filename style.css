@@ -65,20 +65,38 @@ a:hover{
   margin-top: 10px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1)
 }
+#cover_foto{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: url("images/cover.jpg") no-repeat fixed;
+  background-position: calc(50% + 50px) 50%;
+}
 .profile{
   margin: auto;
   max-width: 300px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#profile{
+  height: 500px;
+  position: relative;
 }
 .profile img{
   border-radius: 50%;
-  max-width: 100%;
+  max-width: 50%;
   padding-top: 20px;
 }
 .bottom {
   text-align: center;
 }
 .interests img{
-  max-width: 250px;
+  max-width: 200px;
 }
 .btn {
   background-color: #50808E;
@@ -118,10 +136,22 @@ a:hover{
 #sidebar a:hover {
   color: #50808E;
 }
+.mobile{
+  display: none;
+}
 @media (max-width: 600px) {
   /* For a screen < 600px, this CSS will be read */
   body{
     background-color: rgb(75,75,75);
+  }
+  .mobile{
+    display: block;
+  }
+  .interests img{
+    max-width: 100%;
+  }
+  .desktop{
+    display: none;
   }
   #sidebar {
     width: 40px;
@@ -131,5 +161,11 @@ a:hover{
   }
   #page-content {
     margin-left: 65px;
+  }
+  .profile{
+    left: 0;
+  }
+  #cover_foto{
+    background-position: calc(50% + 25px) 50%;
   }
 }
